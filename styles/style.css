@@ -1,0 +1,153 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.notes-container-top, .notes-container-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-top-small {
+  width: 21px;
+  height: 120px;
+  border: 1px solid black;
+  border-bottom: none;
+  border-left: none;
+}
+
+.key-top-big {
+  width: calc(140px/7);
+  height: 120px;
+  border: 1px solid black;
+  border-bottom: none;
+  border-left: none;
+}
+
+.black {
+  background-color: black;
+}
+
+.key {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 35px;
+  height: 75px;
+  border: 1px solid black;
+  border-top: none;
+  font-weight: bolder;
+
+  /* text-align: center; */
+}
+
+.key + .key, .key-top-small + .key-top-small {
+  border-left: none;
+}
+
+.notes-container-top .key{
+  border-bottom: none;
+}
+
+.selected {
+  color: green;
+}
+
+#play {
+  border: 1px solid black;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 10rem;
+  text-align: center;
+  border: 0.1rem solid black;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+/* .key:hover {
+  background-color: green;
+} */
+
+.disable-select {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+/* GAME */
+.container, .answers-container, .question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  flex-direction: column;
+}
+
+.question-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.answers-container {
+  padding: 20px 0;
+  gap: 5px;
+}
+
+.answer {
+  text-align: center;
+  width: 40px;
+  width: 40px;
+  font-size: 2rem;
+  border: 1px solid black;
+}
+
+img {
+  width: 250px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.correct {
+  background-color: #28a745;
+}
+
+.incorrect {
+  background-color: #dc3545;
+}
